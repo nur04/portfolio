@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+box-sizing: border-box;
+}
+body {
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+}
+.topnav {
+overflow: hidden;
+background-color: #ddd;
+}
+.topnav a {
+float: left;
+display: block;
+color: rgba(0,0,0,1.0);
+text-align: center;padding: 8px 12px;
+text-decoration: none;
+font-size:13px;
+}
+.topnav a:hover {
+background-color: #fff;
+color: black;
+text-decoration:underline;
+}
+.topnav a:active{
+background-color:#fff;
+color:blue;
+}
+.topnav .icon {
+display: none;
+}
+@media screen and (max-width: 600px) {
+.topnav a:not(:first-child) {display: none;}
+.topnav a.icon {
+float: right;
+display: block;
+}}
+@media screen and (max-width: 600px) {
+.topnav.responsive {position: relative;}
+.topnav.responsive .icon {
+position: absolute;
+right: 0;
+top: 0;
+}
+.topnav.responsive a {
+display: block;
+text-align: left;
+}
+}
+.topnav input[type=text] {
+float: right;
+padding: 2px;
+margin-top: 7px;
+margin-right: 10px;
+border: none;
+font-size: 12px;
+}
+@media screen and (max-width: 600px) {
+.topnav a, .topnav input[type=text] {
+float: none;
+display: block;text-align: left;
+width: 100%;
+margin: 0;
+padding: 5px;
+}
+.topnav input[type=text] {
+border: 1px solid lightblue;
+}
+}
+.header {
+padding: 1px;
+text-align: left;
+background: rgba(222,222,222,0.8);
+font-family: "Times New Roman", Times, serif;
+font-size:17px;
+color:dodgerblue;
+padding:65px 100px 100px 160px;
+}
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+float: left;
+width: 70%;}
+/* Right column */
+.rightcolumn {
+float: left;
+width: 30%;
+background-color: #f1f1f1;
+padding-left: 13px;
+}
+.rod {
+display: -ms-flexbox; /* IE10 */
+display: flex;
+-ms-flex-wrap: wrap; /* IE10 */
+flex-wrap: wrap;
+padding: 0 4px;
+}
+/* Create four equal columns that sits next to each other */
+.column {
+-ms-flex: 50%; /* IE10 */
+flex: 50%;
+max-width: 50%;
+padding: 0 2px;
+}
+.column img {
+margin-top: 4px;vertical-align: middle;
+width: 100%;
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other
+*/
+@media screen and (max-width: 600px) {
+.column {
+-ms-flex: 100%;
+flex: 100%;
+max-width: 100%;
+}
+}
+.imgNo1{
+background-color: transparent;
+width:100%;
+}
+/* Add a card effect for articles */
+.card {
+font-family: "Times New Roman", Times, serif;
+background-color: white;
+padding: 16px;margin-top: 10px;
+}
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+/* Footer */
+footer{
+position: fixed;
+bottom: 0;
+}
+@media (max-height:800px){
+footer { position: static; }
+}
+.footer-distributed{
+background-color: #2c292f;
+box-sizing: border-box;
+width: 100%;
+text-align: left;
+font: bold 16px sans-serif;
+padding: 50px 50px 60px 50px;margin-top: 80px;
+}
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+display: inline-block;
+vertical-align: top;
+}
+/* Footer left */
+.footer-distributed .footer-left{
+width: 30%;
+}
+.footer-distributed h3{
+color: #ffffff;
+font: normal 36px 'Cookie', cursive;
+margin: 0;
+}
+/* The company logo */
+.footer-distributed .footer-left img{
+width: 30%;
+}
+.footer-distributed h3 span{color: #e0ac1c;
+}
+/* Footer links */
+.footer-distributed .footer-links{
+color: #ffffff;
+margin: 20px 0 12px;
+}
+.footer-distributed .footer-links a{
+display:inline-block;
+line-height: 1.8;
+text-decoration: none;
+color: inherit;
+}
+.footer-distributed .footer-company-name{
+color: #8f9296;
+font-size: 14px;
+font-weight: normal;
+margin: 0;
+}
+/* Footer Center */
+.footer-distributed .footer-center{
+width: 35%;}
+.footer-distributed .footer-center i{
+background-color: #33383b;
+color: #ffffff;
+font-size: 25px;
+width: 38px;
+height: 38px;
+border-radius: 50%;
+text-align: center;
+line-height: 42px;
+margin: 10px 15px;
+vertical-align: middle;
+}
+.footer-distributed .footer-center i.fa-envelope{
+font-size: 17px;
+line-height: 38px;
+}
+.footer-distributed .footer-center p{
+display: inline-block;
+color: #ffffff;
+vertical-align: middle;
+margin:0;
+}
+.footer-distributed .footer-center p span{display:block;
+font-weight: normal;
+font-size:14px;
+line-height:2;
+}
+.footer-distributed .footer-center p a{
+color: #e0ac1c;
+text-decoration: none;;
+}
+/* Footer Right */
+.footer-distributed .footer-right{
+width: 30%;
+}
+.footer-distributed .footer-company-about{
+line-height: 20px;
+color: #92999f;
+font-size: 13px;
+font-weight: normal;
+margin: 0;
+}
+.footer-distributed .footer-company-about span{
+display: block;
+color: #ffffff;font-size: 18px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+.footer-distributed .footer-icons{
+margin-top: 25px;
+}
+.footer-distributed .footer-icons a{
+display: inline-block;
+width: 35px;
+height: 35px;
+cursor: pointer;
+background-color: #33383b;
+border-radius: 2px;
+font-size: 20px;
+color: #ffffff;
+text-align: center;
+line-height: 35px;
+margin-right: 3px;
+margin-bottom: 5px;
+}
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */@media (max-width: 880px) {
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+display: block;
+width: 100%;
+margin-bottom: 40px;
+text-align: center;
+}
+.footer-distributed .footer-center i{
+margin-left: 0;
+}
+}
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of
+each other instead of next to each other */
+@media screen and (max-width: 800px) {
+.leftcolumn, .rightcolumn {
+width: 100%;
+padding: 0;
+}
+}/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top
+of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+.topnav a {
+float: none;
+width: 100%;
+}
+}
+#rcorners1 {
+border-radius: 24px;
+background: rgba(4,162,255,0.9);
+padding: 4px;
+width: 100px;
+height: 25px;
+color:#000000;
+font-variant:small-caps;
+font-size:15px;
+}
+</style>
+</head>
+<body>
+<div class="topnav" id="myTopnav"><a href="#">Home</a>
+<a href="#">Education</a>
+<a href="#">Work</a>
+<a href="#">Contact</a>
+<a href="#">Info</a>
+<a style="float:right;">About</a>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+<i class="fa fa-bars"></i>
+</a>
+<input type="text" placeholder="Search..">
+</div>
+<div class="header">
+<h1><i>Hello!<br><br>I am Kazi <br> Nur Ahmed</h1></i>
+<p style="font: normal 15px 'Cookie', cursive;">An Honest, Dutiful & dedicated
+student..</p><br><br>
+<div id="rcorners1"> &nbsp; &nbsp;Thank you</div>
+</div>
+<div class="row">
+<div class="leftcolumn">
+<div class="card">
+<h2><i class='fa fa-globe' style='font-size:33px;color:red'></i>Ancestral Home... </h2>
+<h5>This photo was taken, Dec 7, 2017</h5><div class="imgNo1">
+<img src="village.png" alt="cannot load the image" width="650" height="490">
+<p> Spechless beauty and the natural photo of my village was awesome..</p></div>
+</div>
+<div class="card">
+<h2>TITLE HEADING</h2>
+<h5>Title description, Sep 2, 2017</h5>
+<div class="imgNo1" >
+<img src="20191006_182345.jpg" alt="cannot load the image"width="650" height="400"
+></div>
+<p>Some text..</p>
+<p> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+minim veniam, quis nostrud exercitation ullamco.</p>
+</div>
+</div>
+<div class="rightcolumn">
+<div class="card">
+<h2><i class='fa fa-globe' style='font-size:33px;color:red'></i>
+About Me</h2>
+<div class="imgNo1" ><img src="20200331_062139.jpg" alt="cannot load the image" width="250"
+height="270" ></div></div>
+<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+</div>
+<div class="card">
+<h3>Popular Post</h3>
+<div class="rod">
+<div class="column"><img src="20200215_102629.jpg" style="width:100%">
+<img src="20200319_143245.jpg" style="width:100%">
+<img src="20200319_142601.jpg" style="width:100%">
+<img src="20200319_142849.jpg" style="width:100%">
+<img src="20200331_062139.jpg" style="width:100%">
+</div>
+<div class="column">
+<img src="20200219_215500.jpg" style="width:100%">
+<img src="20200319_142601.jpg" style="width:100%">
+<img src="20200319_143245.jpg" style="width:100%">
+<img src="20190329_153238.jpg" style="width:100%">
+<img src="leaf.jpg" style="width:100%">
+</div>
+</div>
+<div class="card">
+<p><h3 style="font: normal 20px 'Cookie', cursive;">Follow Me on:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+href="https://web.facebook.com/?_rdc=1&_rdr"><i class="fa fa-facebook-official" style="fontsize:26px;color:dodgerblue;"></i></a>
+&nbsp;&nbsp;<i class="fa fa-instagram" style="fontsize:26px;color:dodgerblue;"></i>
+&nbsp;&nbsp;<i class="fa fa-twitter" style="fontsize:26px;color:dodgerblue;"></i>
+&nbsp;&nbsp;<i class="fa fa-whatsapp" style="fontsize:26px;color:green;"></i>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&
+Visit my youtube channel:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-youtube" style="fontsize:29px;color:red;"></i></p></h3>
+</div>
+</div>
+</div>
+<footer class="footer-distributed">
+<div class="footer-left">
+<img src="">
+<h3>About<span>Nur</span></h3>
+<p class="footer-links">
+<a href="#">Home</a>
+|
+<a href="#">Blog</a>
+|
+<a href="#">About</a>
+|
+<a href="#">Contact</a>
+</p>
+<p class="footer-company-name">© 2020 Nur's software Pvt. Ltd.</p>
+</div>
+<div class="footer-center"><div>
+<i class="fa fa-map-marker"></i>
+<p><span>420/1 - Khilgaon,
+Flat. No.-4(E) , Sector - 1</span>
+Multitech Monuara Garden , Adorshobagh,
+Khilgaon,Dhaka- 2019</p>
+</div>
+<div>
+<i class="fa fa-phone"></i>
+<p>+91 22-27782183</p>
+</div>
+<div>
+<i class="fa fa-envelope"></i>
+<p><a
+href="nursowftware.@gmail.com">support@eduonix.com</a></p>
+</div>
+</div>
+<div class="footer-right">
+<p class="footer-company-about">
+<span>About this website</span>
+This website is created with the help of W3SCHOOLS which is
+THE WORLD'S LARGEST WEB DEVELOPER SITE. It offers training and skill building courses over Website
+Devolopment, Design & Management for free.</p>
+<div class="footer-icons">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-linkedin"></i></a>
+<a href="#"><i class="fa fa-youtube"></i></a></div>
+</div>
+</footer>
+<script>
+function myFunction() {
+var x = document.getElementById("myTopnav");
+if (x.className === "topnav") {
+x.className += " responsive";
+} else {
+x.className = "topnav";
+}
+}
+</script>
+</body>
+</html>
